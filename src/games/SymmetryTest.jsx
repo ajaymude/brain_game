@@ -1,14 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameLayout from '../components/GameLayout';
 
 const SymmetryTest = ({ onBack }) => {
     const [grid, setGrid] = useState([]);
     const [score, setScore] = useState(0);
     const [feedback, setFeedback] = useState('');
-
-    useState(() => {
-        generateChallenge();
-    }, []);
 
     const generateChallenge = () => {
         const isSymmetric = Math.random() < 0.5;
@@ -36,6 +32,10 @@ const SymmetryTest = ({ onBack }) => {
         setGrid(g);
         setFeedback('');
     };
+
+    useEffect(() => {
+        generateChallenge();
+    }, []);
 
     const handleAnswer = (ans) => {
         const isSymmetric = grid.every((val, i) => {

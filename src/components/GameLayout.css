@@ -31,6 +31,22 @@
 .game-stats {
     display: flex;
     gap: var(--spacing-md);
+    align-items: center;
+}
+
+.info-button {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 8px 12px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-button:hover {
+    background: var(--glass-hover);
+    transform: scale(1.05);
 }
 
 .stat-item {
@@ -53,6 +69,35 @@
     color: var(--text-primary);
     min-width: 40px;
     text-align: center;
+}
+
+.game-benefits {
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    border: 2px solid var(--accent-cyan);
+}
+
+.game-benefits h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--accent-cyan);
+}
+
+.benefit-section {
+    margin-bottom: var(--spacing-md);
+}
+
+.benefit-section strong {
+    display: block;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.1rem;
+}
+
+.benefit-section p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
 }
 
 .game-instructions {
@@ -89,5 +134,13 @@
 
     .game-stats {
         justify-content: center;
+    }
+
+    .game-benefits {
+        padding: var(--spacing-md);
+    }
+
+    .benefit-section strong {
+        font-size: 1rem;
     }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameLayout from '../components/GameLayout';
 import './RhymeMatch.css';
 
@@ -17,7 +17,7 @@ const RhymeMatch = ({ onBack }) => {
     const [round, setRound] = useState(0);
     const [feedback, setFeedback] = useState('');
 
-    useState(() => {
+    useEffect(() => {
         generateChallenge();
     }, []);
 

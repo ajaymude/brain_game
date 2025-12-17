@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameLayout from '../components/GameLayout';
 import './ShapeShifter.css';
 
@@ -11,7 +11,7 @@ const ShapeShifter = ({ onBack }) => {
     const [task, setTask] = useState('');
     const [score, setScore] = useState(0);
 
-    useState(() => {
+    useEffect(() => {
         generateChallenge();
     }, []);
 

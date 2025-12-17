@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameLayout from '../components/GameLayout';
 import './SameOrDifferent.css';
 
@@ -10,7 +10,7 @@ const SameOrDifferent = ({ onBack }) => {
     const shapes = ['⬤', '■', '▲', '⬟', '⬠'];
     const colors = ['#ef4444', '#3b82f6', '#10b981', '#eab308'];
 
-    useState(() => {
+    useEffect(() => {
         generateChallenge();
     }, []);
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameLayout from '../components/GameLayout';
 import './SymbolMatch.css';
 
@@ -11,7 +11,7 @@ const SymbolMatch = ({ onBack }) => {
     const [found, setFound] = useState(0);
     const [round, setRound] = useState(0);
 
-    useState(() => {
+    useEffect(() => {
         generateChallenge();
     }, []);
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameLayout from '../components/GameLayout';
 import './CountingGame.css';
 
@@ -11,7 +11,7 @@ const CountingGame = ({ onBack }) => {
 
     const emojis = ['⭐', '🔵', '❤️', '🟢', '🔷'];
 
-    useState(() => {
+    useEffect(() => {
         generateChallenge();
     }, []);
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameLayout from '../components/GameLayout';
 
 const PatternMatch = ({ onBack }) => {
@@ -9,7 +9,7 @@ const PatternMatch = ({ onBack }) => {
 
     const symbols = ['⬤', '■', '▲', '⬟', '⭐', '♦'];
 
-    useState(() => {
+    useEffect(() => {
         generateChallenge();
     }, []);
 

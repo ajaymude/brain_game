@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameLayout from '../components/GameLayout';
 import './ClockReading.css';
 
@@ -8,7 +8,7 @@ const ClockReading = ({ onBack }) => {
     const [score, setScore] = useState(0);
     const [feedback, setFeedback] = useState('');
 
-    useState(() => {
+    useEffect(() => {
         generateClock();
     }, []);
 

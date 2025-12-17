@@ -40,13 +40,24 @@
     padding: var(--spacing-lg);
     font-size: 1.3rem;
     font-weight: 700;
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all var(--transition-normal);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .option-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 40px rgba(168, 85, 247, 0.4);
+    transform: translateY(-2px) scale(1.02);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.option-btn:active {
+    transform: translateY(0) scale(0.98);
 }
 
 .feedback {

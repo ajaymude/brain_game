@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameLayout from '../components/GameLayout';
 import './BlinkFocus.css';
 
@@ -9,7 +9,7 @@ const BlinkFocus = ({ onBack }) => {
     const [timeLeft, setTimeLeft] = useState(30);
     const [gameActive, setGameActive] = useState(false);
 
-    useState(() => {
+    useEffect(() => {
         if (gameActive) {
             const timer = setInterval(() => {
                 setTimeLeft(t => {

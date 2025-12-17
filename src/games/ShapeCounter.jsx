@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameLayout from '../components/GameLayout';
 import './ShapeCounter.css';
 
@@ -11,7 +11,7 @@ const ShapeCounter = ({ onBack }) => {
 
     const symbols = ['⬤', '■', '▲', '⬟'];
 
-    useState(() => {
+    useEffect(() => {
         generateChallenge();
     }, []);
 
