@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameLayout from '../components/GameLayout';
 import './AnagramSolver.css';
 
@@ -29,10 +29,6 @@ const AnagramSolver = ({ onBack }) => {
     const [questionsAnswered, setQuestionsAnswered] = useState(0);
     const [skipped, setSkipped] = useState(0);
 
-    useState(() => {
-        loadNewWord();
-    }, []);
-
     const loadNewWord = () => {
         const randomWord = words[Math.floor(Math.random() * words.length)];
         setCurrentWord(randomWord);
@@ -40,6 +36,10 @@ const AnagramSolver = ({ onBack }) => {
         setShowHint(false);
         setFeedback('');
     };
+
+    useEffect(() => {
+        loadNewWord();
+    }, []);
 
     const checkAnswer = () => {
         if (!userAnswer.trim()) return;

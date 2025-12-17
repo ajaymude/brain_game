@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameLayout from '../components/GameLayout';
 import './EquationSolver.css';
 
@@ -7,10 +7,6 @@ const EquationSolver = ({ onBack }) => {
     const [userAnswer, setUserAnswer] = useState('');
     const [score, setScore] = useState(0);
     const [feedback, setFeedback] = useState('');
-
-    useState(() => {
-        generateEquation();
-    }, []);
 
     const generateEquation = () => {
         const x = Math.floor(Math.random() * 10) + 1;
@@ -28,6 +24,10 @@ const EquationSolver = ({ onBack }) => {
         setUserAnswer('');
         setFeedback('');
     };
+
+    useEffect(() => {
+        generateEquation();
+    }, []);
 
     const handleSubmit = () => {
         if (parseInt(userAnswer) === equation.answer) {

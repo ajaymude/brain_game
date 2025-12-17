@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameLayout from '../components/GameLayout';
 import './Concentration.css';
 
@@ -9,10 +9,6 @@ const Concentration = ({ onBack }) => {
     const [moves, setMoves] = useState(0);
     const [score, setScore] = useState(0);
 
-    useState(() => {
-        initGame();
-    }, []);
-
     const initGame = () => {
         const symbols = ['🍎', '🍌', '🍇', '🍊', '🍓', '🍒', '🥝', '🍑'];
         const deck = [...symbols, ...symbols].sort(() => Math.random() - 0.5);
@@ -21,6 +17,10 @@ const Concentration = ({ onBack }) => {
         setMatched([]);
         setMoves(0);
     };
+
+    useEffect(() => {
+        initGame();
+    }, []);
 
     const handleCardClick = (idx) => {
         if (flipped.length === 2 || matched.includes(idx) || flipped.includes(idx)) return;

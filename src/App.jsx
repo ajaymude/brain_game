@@ -70,6 +70,40 @@ import GreaterSum from './games/GreaterSum';
 import MentalMath from './games/MentalMath';
 import BlinkFocus from './games/BlinkFocus';
 import Divisibility from './games/Divisibility';
+import RapidAddition from './games/RapidAddition';
+import TimeTables from './games/TimeTables';
+import RhythmTapper from './games/RhythmTapper';
+import Factorials from './games/Factorials';
+import SquareRoots from './games/SquareRoots';
+import OrderedRecall from './games/OrderedRecall';
+import HigherLower from './games/HigherLower';
+import PatternMatch from './games/PatternMatch';
+import RomanNumerals from './games/RomanNumerals';
+import Averages from './games/Averages';
+import SymmetryTest from './games/SymmetryTest';
+import DirectionMemory from './games/DirectionMemory';
+import QuickSort from './games/QuickSort';
+import QuickCount from './games/QuickCount';
+import AngleMath from './games/AngleMath';
+import EvenOdd from './games/EvenOdd';
+import LetterCount from './games/LetterCount';
+import NumberRange from './games/NumberRange';
+import PositionMemory from './games/PositionMemory';
+import SpeedReading from './games/SpeedReading';
+import ColorMixer from './games/ColorMixer';
+import DoubleDigits from './games/DoubleDigits';
+import TrueFalse from './games/TrueFalse';
+import MissingLetter from './games/MissingLetter';
+import ShapeFinder from './games/ShapeFinder';
+import MoneyMath from './games/MoneyMath';
+import SkipCount from './games/SkipCount';
+import Rounding from './games/Rounding';
+import BigSmall from './games/BigSmall';
+import OddOneOut from './games/OddOneOut';
+import SequenceNext from './games/SequenceNext';
+import VowelCount from './games/VowelCount';
+import FastFingers from './games/FastFingers';
+import NextNumber from './games/NextNumber';
 import './App.css';
 
 const games = [
@@ -550,7 +584,41 @@ const games = [
   { id: 'greatersum', title: 'Greater Sum', description: 'Compare sums of numbers', category: 'Math', icon: '➕', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: GreaterSum },
   { id: 'mentalmath', title: 'Mental Math', description: 'Multi-step mental arithmetic', category: 'Math', icon: '🧮', gradient: 'linear-gradient(135deg,#fa709a 0%,#fee140 100%)', component: MentalMath },
   { id: 'blinkfocus', title: 'Blink Focus', description: 'Click targets before they disappear', category: 'Attention', icon: '👀', gradient: 'linear-gradient(135deg,#4facfe 0%,#00f2fe 100%)', component: BlinkFocus },
-  { id: 'divisibility', title: 'Divisibility', description: 'Test divisibility rules', category: 'Math', icon: '➗', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: Divisibility }
+  { id: 'divisibility', title: 'Divisibility', description: 'Test divisibility rules', category: 'Math', icon: '➗', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: Divisibility },
+  { id: 'rapidaddition', title: 'Rapid Addition', description: 'Timed addition practice', category: 'Math', icon: '➕', gradient: 'linear-gradient(135deg,#fa709a 0%,#fee140 100%)', component: RapidAddition },
+  { id: 'timetables', title: 'Times Tables', description: 'Practice multiplication tables', category: 'Math', icon: '✖️', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: TimeTables },
+  { id: 'rhythmtapper', title: 'Rhythm Tapper', description: 'Remember rhythm patterns', category: 'Memory', icon: '🎵', gradient: 'linear-gradient(135deg,#a8edea 0%,#fed6e3 100%)', component: RhythmTapper },
+  { id: 'factorials', title: 'Factorials', description: 'Calculate factorials', category: 'Math', icon: '❗', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: Factorials },
+  { id: 'squareroots', title: 'Square Roots', description: 'Find perfect square roots', category: 'Math', icon: '√', gradient: 'linear-gradient(135deg,#fa709a 0%,#fee140 100%)', component: SquareRoots },
+  { id: 'orderedrecall', title: 'Ordered Recall', description: 'Remember words in sequence', category: 'Memory', icon: '📝', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: OrderedRecall },
+  { id: 'higherlower', title: 'Higher or Lower', description: 'Number prediction game', category: 'Logic', icon: '🎲', gradient: 'linear-gradient(135deg,#f093fb 0%,#f5576c 100%)', component: HigherLower },
+  { id: 'patternmatch', title: 'Pattern Match', description: 'Match symbol patterns', category: 'Visual & Spatial', icon: '🎨', gradient: 'linear-gradient(135deg,#84fab0 0%,#8fd3f4 100%)', component: PatternMatch },
+  { id: 'romannumerals', title: 'Roman Numerals', description: 'Convert Roman to Arabic', category: 'Math', icon: 'Ⅰ', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: RomanNumerals },
+  { id: 'averages', title: 'Averages', description: 'Calculate mean values', category: 'Math', icon: '➗', gradient: 'linear-gradient(135deg,#fa709a 0%,#fee140 100%)', component: Averages },
+  { id: 'symmetrytest', title: 'Symmetry Test', description: 'Identify symmetric patterns', category: 'Visual & Spatial', icon: '〰️', gradient: 'linear-gradient(135deg,#84fab0 0%,#8fd3f4 100%)', component: SymmetryTest },
+  { id: 'directionmemory', title: 'Direction Memory', description: 'Remember arrow sequences', category: 'Memory', icon: '🧭', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: DirectionMemory },
+  { id: 'quicksort', title: 'Quick Sort Check', description: 'Identify sorted sequences', category: 'Logic', icon: '📊', gradient: 'linear-gradient(135deg,#f093fb 0%,#f5576c 100%)', component: QuickSort },
+  { id: 'quickcount', title: 'Quick Count', description: 'Count digits rapidly', category: 'Attention', icon: '🔢', gradient: 'linear-gradient(135deg,#4facfe 0%,#00f2fe 100%)', component: QuickCount },
+  { id: 'anglemath', title: 'Angle Math', description: 'Find missing triangle angles', category: 'Math', icon: '📐', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: AngleMath },
+  { id: 'evenodd', title: 'Even or Odd Majority', description: 'Count even vs odd numbers', category: 'Logic', icon: '🔢', gradient: 'linear-gradient(135deg,#f093fb 0%,#f5576c 100%)', component: EvenOdd },
+  { id: 'lettercount', title: 'Letter Count', description: 'Count letter occurrences', category: 'Language', icon: '🔤', gradient: 'linear-gradient(135deg,#a8edea 0%,#fed6e3 100%)', component: LetterCount },
+  { id: 'numberrange', title: 'Number Range', description: 'Calculate differences', category: 'Math', icon: '➖', gradient: 'linear-gradient(135deg,#fa709a 0%,#fee140 100%)', component: NumberRange },
+  { id: 'positionmemory', title: 'Position Memory', description: 'Remember item positions', category: 'Memory', icon: '📍', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: PositionMemory },
+  { id: 'speedreading', title: 'Speed Reading', description: 'Remember words shown briefly', category: 'Attention', icon: '⚡', gradient: 'linear-gradient(135deg,#4facfe 0%,#00f2fe 100%)', component: SpeedReading },
+  { id: 'colormixer', title: 'Color Mixer', description: 'Identify mixed color results', category: 'Visual & Spatial', icon: '🎨', gradient: 'linear-gradient(135deg,#84fab0 0%,#8fd3f4 100%)', component: ColorMixer },
+  { id: 'doubledigits', title: 'Double Digit Add', description: 'Add two-digit numbers quickly', category: 'Math', icon: '➕', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: DoubleDigits },
+  { id: 'truefalse', title: 'True or False', description: 'Quick fact verification', category: 'Logic', icon: '❓', gradient: 'linear-gradient(135deg,#f093fb 0%,#f5576c 100%)', component: TrueFalse },
+  { id: 'missinglette', title: 'Missing Letter', description: 'Find the missing letter', category: 'Language', icon: '🔠', gradient: 'linear-gradient(135deg,#a8edea 0%,#fed6e3 100%)', component: MissingLetter },
+  { id: 'shapefinder', title: 'Shape Finder', description: 'Click all target shapes', category: 'Visual & Spatial', icon: '🔍', gradient: 'linear-gradient(135deg,#84fab0 0%,#8fd3f4 100%)', component: ShapeFinder },
+  { id: 'moneymath', title: 'Money Math', description: 'Calculate change quickly', category: 'Math', icon: '💰', gradient: 'linear-gradient(135deg,#fa709a 0%,#fee140 100%)', component: MoneyMath },
+  { id: 'skipcount', title: 'Skip Counting', description: 'Continue number patterns', category: 'Math', icon: '🔢', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: SkipCount },
+  { id: 'rounding', title: 'Rounding Numbers', description: 'Round to nearest 10', category: 'Math', icon: '〰️', gradient: 'linear-gradient(135deg,#fa709a 0%,#fee140 100%)', component: Rounding },
+  { id: 'bigsmall', title: 'Biggest Number', description: 'Find the largest number', category: 'Logic', icon: '🔝', gradient: 'linear-gradient(135deg,#f093fb 0%,#f5576c 100%)', component: BigSmall },
+  { id: 'oddoneout', title: 'Odd One Out', description: 'Find the different number', category: 'Logic', icon: '🎯', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: OddOneOut },
+  { id: 'sequencenext', title: 'Sequence Next', description: 'Continue the sequence', category: 'Math', icon: '➡️', gradient: 'linear-gradient(135deg,#fa709a 0%,#fee140 100%)', component: SequenceNext },
+  { id: 'vowelcount', title: 'Vowel Counter', description: 'Count vowels in words', category: 'Language', icon: '🅰️', gradient: 'linear-gradient(135deg,#a8edea 0%,#fed6e3 100%)', component: VowelCount },
+  { id: 'fastfingers', title: 'Fast Fingers', description: 'Type words as fast as you can', category: 'Speed', icon: '⌨️', gradient: 'linear-gradient(135deg,#4facfe 0%,#00f2fe 100%)', component: FastFingers },
+  { id: 'nextnumber', title: 'Next Number', description: 'What comes after?', category: 'Math', icon: '➕', gradient: 'linear-gradient(135deg,#667eea 0%,#764ba2 100%)', component: NextNumber }
 ];
 
 const categories = ['All', 'Memory', 'Logic', 'Speed', 'Math', 'Language', 'Problem Solving', 'Working Memory', 'Attention', 'Executive Function', 'Visual & Spatial'];
