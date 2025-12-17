@@ -1,0 +1,56 @@
+.word-assoc-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.words-display {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
+}
+
+.word {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.connector {
+    font-size: 2rem;
+    color: var(--accent-cyan);
+}
+
+.answer-buttons {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.answer-buttons .btn {
+    font-size: 1.2rem;
+    padding: 14px 35px;
+}
+
+.feedback {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--radius-md);
+}
+
+.feedback.correct {
+    color: var(--accent-green);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.feedback.incorrect {
+    color: var(--accent-orange);
+    background: rgba(249, 115, 22, 0.1);
+}

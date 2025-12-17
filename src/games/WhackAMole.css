@@ -1,0 +1,131 @@
+.whack-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.start-screen {
+    text-align: center;
+}
+
+.start-btn {
+    font-size: 1.3rem;
+    padding: 16px 40px;
+    margin-bottom: var(--spacing-md);
+}
+
+.game-info {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.mole-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    max-width: 500px;
+    width: 100%;
+}
+
+.mole-hole {
+    aspect-ratio: 1;
+    background: var(--glass-bg);
+    border: 3px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-fast);
+}
+
+.mole-hole:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.mole-hole.active {
+    background: rgba(168, 85, 247, 0.2);
+    border-color: var(--accent-purple);
+    animation: glow 0.5s infinite;
+}
+
+.mole {
+    font-size: 4rem;
+    animation: popUp 0.3s ease-out;
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(0) translateY(20px);
+    }
+
+    50% {
+        transform: scale(1.2) translateY(-5px);
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+.speed-indicator {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    color: var(--accent-orange);
+    font-weight: 700;
+}
+
+.game-over-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    padding: var(--spacing-xl);
+    text-align: center;
+    min-width: 350px;
+}
+
+.game-over-message h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-lg);
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.final-score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+    .mole-grid {
+        max-width: 400px;
+        gap: var(--spacing-sm);
+    }
+
+    .mole {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mole-grid {
+        max-width: 300px;
+    }
+
+    .mole {
+        font-size: 2.5rem;
+    }
+}

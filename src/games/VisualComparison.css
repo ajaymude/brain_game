@@ -1,0 +1,44 @@
+.visual-comparison-container {
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+    justify-content: center;
+}
+
+.shapes-display {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.shape-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.shape {
+    border-radius: 50%;
+    transition: all var(--transition-normal);
+}
+
+.vs-text {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-secondary);
+}
+
+.choice-btn {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+}
+
+.feedback-icon {
+    font-size: 4rem;
+    animation: fadeIn 0.3s ease-out;
+}

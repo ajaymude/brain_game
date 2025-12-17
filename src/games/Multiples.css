@@ -1,0 +1,45 @@
+.multiples-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.number-display {
+    padding: var(--spacing-xl);
+    text-align: center;
+    min-width: 300px;
+}
+
+.big-number {
+    font-size: 5rem;
+    font-weight: 900;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.question {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent-cyan);
+    margin-top: var(--spacing-md);
+}
+
+.answer-buttons {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.answer-buttons .btn {
+    font-size: 1.3rem;
+    padding: 16px 40px;
+}
+
+.feedback-icon {
+    font-size: 4rem;
+    animation: fadeIn 0.3s ease-out;
+}

@@ -1,0 +1,161 @@
+.card-memory-container {
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+    padding: var(--spacing-xl);
+}
+
+.level-info {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-cyan);
+}
+
+.start-btn {
+    font-size: 1.3rem;
+    padding: 16px 40px;
+}
+
+.showing-phase,
+.guessing-phase {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+    width: 100%;
+}
+
+.instruction {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.cards-display,
+.selected-cards {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.playing-card {
+    width: 80px;
+    height: 120px;
+    background: white;
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ddd;
+}
+
+.card-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.card-suit {
+    font-size: 2rem;
+}
+
+.playing-card.small {
+    width: 60px;
+    height: 90px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.playing-card.small:hover:not(.disabled) {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.playing-card.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.card-value-small {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.card-suit-small {
+    font-size: 1.5rem;
+}
+
+.playing-card.selected {
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+.deck-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: var(--spacing-sm);
+    max-width: 700px;
+    width: 100%;
+}
+
+.result-message {
+    padding: var(--spacing-xl);
+    text-align: center;
+    min-width: 350px;
+}
+
+.result-message h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.result-message p {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .playing-card {
+        width: 65px;
+        height: 95px;
+    }
+
+    .card-value {
+        font-size: 1.5rem;
+    }
+
+    .card-suit {
+        font-size: 1.7rem;
+    }
+
+    .playing-card.small {
+        width: 50px;
+        height: 75px;
+    }
+
+    .deck-selection {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    }
+}

@@ -1,0 +1,39 @@
+.same-diff-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.items-display {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.item {
+    font-size: 5rem;
+}
+
+.vs {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.answer-buttons {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.answer-buttons .btn {
+    font-size: 1.2rem;
+    padding: 14px 35px;
+}
+
+.feedback-icon {
+    font-size: 4rem;
+    animation: fadeIn 0.3s ease-out;
+}

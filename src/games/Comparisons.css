@@ -1,0 +1,46 @@
+.comparisons-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.comparison-display {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
+}
+
+.comp-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--accent-cyan);
+    min-width: 100px;
+    text-align: center;
+}
+
+.comp-symbol {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-purple);
+    animation: pulse 1.5s infinite;
+}
+
+.symbol-buttons {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.symbol-btn {
+    font-size: 2rem;
+    padding: 16px 30px;
+    min-width: 80px;
+}
+
+.feedback-icon {
+    font-size: 4rem;
+    animation: fadeIn 0.3s ease-out;
+}

@@ -1,0 +1,58 @@
+.counting-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.objects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-lg);
+    max-width: 600px;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.count-object {
+    font-size: 1.8rem;
+}
+
+.answer-section {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.answer-section label {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.count-input {
+    width: 100px;
+    padding: 14px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.feedback {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--radius-md);
+}
+
+.feedback.correct {
+    color: var(--accent-green);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.feedback.incorrect {
+    color: var(--accent-orange);
+    background: rgba(249, 115, 22, 0.1);
+}

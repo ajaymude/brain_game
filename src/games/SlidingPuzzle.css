@@ -1,0 +1,116 @@
+.sliding-puzzle-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl);
+    position: relative;
+}
+
+.puzzle-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.puzzle-controls label {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.puzzle-grid {
+    display: grid;
+    gap: 8px;
+    padding: var(--spacing-lg);
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    max-width: 450px;
+}
+
+.puzzle-tile {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+    cursor: default;
+    border: 2px solid transparent;
+}
+
+.puzzle-tile.empty {
+    background: transparent;
+    border: 2px dashed var(--glass-border);
+}
+
+.puzzle-tile.movable {
+    cursor: pointer;
+    border-color: var(--accent-cyan);
+}
+
+.puzzle-tile.movable:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(168, 85, 247, 0.5);
+    background: var(--gradient-secondary);
+}
+
+.win-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    padding: var(--spacing-xl);
+    text-align: center;
+    min-width: 350px;
+}
+
+.win-message h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.win-message p {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-secondary);
+}
+
+.reset-btn {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+}
+
+@media (max-width: 768px) {
+    .puzzle-grid {
+        max-width: 350px;
+        gap: 6px;
+    }
+
+    .puzzle-tile {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .puzzle-grid {
+        max-width: 280px;
+        gap: 4px;
+    }
+
+    .puzzle-tile {
+        font-size: 1.2rem;
+    }
+}

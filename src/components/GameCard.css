@@ -1,0 +1,114 @@
+.game-card {
+    padding: var(--spacing-lg);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.game-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--card-gradient, var(--gradient-primary));
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.game-card:hover::before {
+    opacity: 1;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.game-card-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-md);
+    background: var(--card-gradient, var(--gradient-primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    transition: transform var(--transition-normal);
+}
+
+.game-card:hover .game-card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.game-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.game-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.game-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.game-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.game-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: var(--card-gradient, var(--gradient-primary));
+    opacity: 0.1;
+    transition: height var(--transition-normal);
+}
+
+.game-card:hover .game-card-overlay {
+    height: 100%;
+}
+
+.icon-emoji {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 768px) {
+    .game-card {
+        min-height: 240px;
+        padding: var(--spacing-md);
+    }
+
+    .game-card-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 2rem;
+    }
+
+    .game-title {
+        font-size: 1.25rem;
+    }
+}

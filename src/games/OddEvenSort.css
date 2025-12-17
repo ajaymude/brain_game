@@ -1,0 +1,46 @@
+.odd-even-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.numbers-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-lg);
+    min-height: 150px;
+    justify-content: center;
+}
+
+.number-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--glass-border);
+}
+
+.number-box.odd {
+    background: rgba(168, 85, 247, 0.2);
+    border-color: var(--accent-purple);
+}
+
+.number-box.even {
+    background: rgba(6, 182, 212, 0.2);
+    border-color: var(--accent-cyan);
+}
+
+.controls {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    justify-content: center;
+}

@@ -1,0 +1,127 @@
+.color-rush-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.color-challenge {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.color-display {
+    padding: var(--spacing-xl);
+    min-width: 400px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-secondary);
+    border: 2px solid var(--glass-border);
+}
+
+.color-word {
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: pulse 1.5s infinite;
+}
+
+.answer-buttons {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.answer-btn {
+    font-size: 1.5rem;
+    padding: 20px 50px;
+    font-weight: 700;
+    min-width: 150px;
+    transition: all var(--transition-fast);
+}
+
+.yes-btn {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.yes-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.5);
+}
+
+.no-btn {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.no-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 40px rgba(239, 68, 68, 0.5);
+}
+
+.streak-indicator {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    padding: var(--spacing-md);
+    background: rgba(249, 115, 22, 0.1);
+    border-radius: var(--radius-md);
+    animation: pulse 0.5s;
+}
+
+.game-tip {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.game-over-message {
+    padding: var(--spacing-xl);
+    text-align: center;
+    min-width: 350px;
+}
+
+.game-over-message h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-lg);
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.final-score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.best-streak {
+    font-size: 1.2rem;
+    color: var(--accent-orange);
+    margin-bottom: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+    .color-display {
+        min-width: 300px;
+        min-height: 150px;
+    }
+
+    .color-word {
+        font-size: 2.5rem;
+    }
+
+    .answer-buttons {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .answer-btn {
+        width: 100%;
+        padding: 16px 40px;
+    }
+}

@@ -1,0 +1,56 @@
+.fraction-compare-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.fractions-display {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.fraction {
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    min-width: 120px;
+}
+
+.numerator,
+.denominator {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.divider {
+    width: 100%;
+    height: 3px;
+    background: var(--text-primary);
+}
+
+.vs-symbol {
+    font-size: 2.5rem;
+    color: var(--accent-purple);
+    animation: pulse 1.5s infinite;
+}
+
+.symbol-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.symbol-buttons .btn {
+    font-size: 2rem;
+    padding: 14px 30px;
+}
+
+.feedback-icon {
+    font-size: 4rem;
+    animation: fadeIn 0.3s ease-out;
+}

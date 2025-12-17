@@ -1,0 +1,56 @@
+.symbol-match-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.target-display {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.target-symbol {
+    font-size: 3rem;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--gradient-primary);
+    border-radius: var(--radius-md);
+}
+
+.symbol-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-sm);
+    max-width: 450px;
+    width: 100%;
+}
+
+.symbol-cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.symbol-cell:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(168, 85, 247, 0.4);
+}
+
+.symbol-cell.found {
+    background: rgba(16, 185, 129, 0.3);
+    border-color: var(--accent-green);
+    pointer-events: none;
+}

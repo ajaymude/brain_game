@@ -1,0 +1,193 @@
+.math-sprint-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.math-game {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.difficulty-badge {
+    padding: 8px 24px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-lg);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.math-problem {
+    padding: var(--spacing-xl);
+    min-width: 500px;
+}
+
+.problem-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    font-family: 'Poppins', sans-serif;
+}
+
+.number {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    min-width: 100px;
+    text-align: center;
+}
+
+.operator {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-purple);
+}
+
+.equals {
+    font-size: 3rem;
+    color: var(--accent-cyan);
+}
+
+.answer-placeholder {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--accent-pink);
+    animation: pulse 1.5s infinite;
+}
+
+.answer-section {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.math-input {
+    width: 180px;
+    padding: 16px 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    border: 2px solid var(--glass-border);
+    color: var(--text-primary);
+    background: var(--glass-bg);
+    transition: all var(--transition-normal);
+}
+
+.math-input:focus {
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+    outline: none;
+}
+
+.math-input::placeholder {
+    color: var(--text-muted);
+}
+
+.feedback {
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--radius-md);
+    animation: fadeIn 0.2s ease-out;
+}
+
+.feedback.correct {
+    color: var(--accent-green);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.feedback.incorrect {
+    color: var(--accent-orange);
+    background: rgba(249, 115, 22, 0.1);
+}
+
+.stats-display {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.stat-box {
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    text-align: center;
+    min-width: 120px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.game-over-message {
+    padding: var(--spacing-xl);
+    text-align: center;
+    min-width: 400px;
+}
+
+.game-over-message h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-lg);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.final-score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.questions-count,
+.difficulty-reached {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+    .math-problem {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .problem-display {
+        gap: var(--spacing-sm);
+    }
+
+    .number {
+        font-size: 2.5rem;
+        min-width: 70px;
+    }
+
+    .operator,
+    .equals {
+        font-size: 2rem;
+    }
+
+    .answer-placeholder {
+        font-size: 2.5rem;
+    }
+
+    .answer-section {
+        flex-direction: column;
+    }
+
+    .math-input {
+        width: 200px;
+    }
+}

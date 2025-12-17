@@ -1,0 +1,53 @@
+.percentage-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.problem-display {
+    padding: var(--spacing-xl);
+    min-width: 400px;
+    text-align: center;
+}
+
+.problem-text {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.answer-section {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.percentage-input {
+    width: 150px;
+    padding: 14px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.feedback {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--radius-md);
+}
+
+.feedback.correct {
+    color: var(--accent-green);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.feedback.incorrect {
+    color: var(--accent-orange);
+    background: rgba(249, 115, 22, 0.1);
+}

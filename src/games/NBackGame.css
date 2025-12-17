@@ -1,0 +1,207 @@
+.nback-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.nback-start {
+    text-align: center;
+}
+
+.difficulty-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.difficulty-selector label {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.start-btn {
+    font-size: 1.2rem;
+    padding: 16px 40px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.game-explanation {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    text-align: left;
+}
+
+.game-explanation h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--accent-purple);
+}
+
+.game-explanation p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.nback-game {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.nback-info {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.nback-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border);
+    border-radius: var(--radius-md);
+}
+
+.grid-cell {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.grid-cell.active {
+    background: var(--gradient-primary);
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.8);
+    transform: scale(1.1);
+    border-color: var(--accent-purple);
+}
+
+.nback-buttons {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.match-btn {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    font-size: 1.3rem;
+    padding: 16px 40px;
+    font-weight: 700;
+}
+
+.match-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 35px rgba(16, 185, 129, 0.5);
+}
+
+.nomatch-btn {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    font-size: 1.3rem;
+    padding: 16px 40px;
+    font-weight: 700;
+}
+
+.nomatch-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 35px rgba(239, 68, 68, 0.5);
+}
+
+.wait-message {
+    font-size: 1.2rem;
+    color: var(--accent-cyan);
+    padding: var(--spacing-md);
+    background: rgba(6, 182, 212, 0.1);
+    border-radius: var(--radius-md);
+}
+
+.feedback {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.feedback.correct {
+    color: var(--accent-green);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.feedback.incorrect {
+    color: var(--accent-orange);
+    background: rgba(249, 115, 22, 0.1);
+}
+
+.nback-results {
+    padding: var(--spacing-xl);
+    text-align: center;
+    min-width: 400px;
+}
+
+.nback-results h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.results-stats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-sm);
+}
+
+.result-label {
+    color: var(--text-secondary);
+}
+
+.result-value {
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .grid-cell {
+        width: 70px;
+        height: 70px;
+    }
+
+    .nback-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .match-btn,
+    .nomatch-btn {
+        width: 100%;
+    }
+
+    .nback-results {
+        min-width: auto;
+        width: 100%;
+    }
+}
